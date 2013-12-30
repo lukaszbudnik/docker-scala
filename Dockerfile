@@ -1,6 +1,6 @@
 # Scala for Ubuntu 12.04 LTS
 #
-# Version     0.1
+# Version     0.2
 
 FROM ubuntu:precise
 MAINTAINER Łukasz Budnik lukasz.budnik@gmail.com
@@ -25,4 +25,4 @@ RUN rm -f scala-2.10.3.deb
 
 # upgrade Java to latest 1.7.x
 RUN echo 'debconf shared/accepted-oracle-license-v1-1 select true' | debconf-set-selections
-RUN apt-get install -y oracle-java7-installer
+RUN apt-get install -y oracle-java7-set-default
