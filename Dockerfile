@@ -46,6 +46,7 @@ RUN rm -f sbt.deb
 
 # print versions
 RUN java -version
-RUN scala -version
+# scala -version returns code 1 instead of 0 thus || echo '' > /dev/null
+RUN scala -version || echo '' > /dev/null
 # fetches all sbt jars from Maven repo so that your sbt will be ready to be used when you launch the image
 RUN sbt --version
