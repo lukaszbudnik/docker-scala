@@ -48,4 +48,4 @@ RUN rm -f sbt.deb
 RUN java -version
 RUN scala -version
 # fetches all sbt jars from Maven repo so that your sbt will be ready to be used when you launch the image
-RUN sbt -version
+RUN sbt --version
